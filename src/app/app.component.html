@@ -1,0 +1,27 @@
+
+    <div class="branding">
+      <a routerLink="/" class="nav-link">
+        <span class="logo"></span>
+      </a>
+      <span class="title">
+        <a href="https://github.com/marcogutto/angular-keycloak-example" target="_blank">angular-keycloak-example</a>
+      </span>
+    </div>
+    <div class="header-nav" >
+      <a routerLink="/" class="active nav-link nav-text">Home</a>
+    </div>
+    <div class="header-actions">
+          <div class="userDetails" *ngIf="userDetails">
+            <h2>{{userDetails.firstName}}</h2>
+            <p>
+              {{userDetails.email}}
+            </p>
+          </div>
+          <a (click)="doLogout()" >Log out</a>        
+    </div>
+  
+  <div class="content-container">
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
